@@ -1,5 +1,5 @@
 [Unit]
-Description=wlan0 power management
+Description=wlan0 power management disable service
 After=network.target
 
 [Service]

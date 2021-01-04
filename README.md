@@ -24,19 +24,26 @@ Raspberry Pi on board WiFi power management disable service
   ```
   git clone https://github.com/takarocks/rpiwlan0poweroff.git
   ```
-4. Copy the rpiwlan0poweroff.service file into **/etc/systemd/system/** directory.
+4. Change to this project directory `rpiwlan0poweroff`.
   ```
-  sudo cp wlan0poweroff.service /etc/systemd/system/wlan0poweroff.service
+  cd rpiwlan0poweroff
   ```
-5. Enable the shutdowndetector.service.
+5. Change permission of `wlan0poweroff.sh`.
+  ```
+  chmod +x wlan0poweroff.sh
+  ```
+6. Copy wlan0poweroff.service file into **/etc/systemd/system/** directory.
+  ```
+  sudo cp wlan0poweroff.service /etc/systemd/system/
+  ```
+7. Enable shutdowndetector.service.
   ```
   sudo systemctl enable wlan0poweroff.service
   ```
-6. The service is processed every time RPi is booted.
+8. The service is processed every time RPi is booted.
 
 
 
 
 ## References
 [systemd](https://www.raspberrypi.org/documentation/linux/usage/systemd.md) [www.raspberrypi.org]
-
