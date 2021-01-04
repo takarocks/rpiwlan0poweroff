@@ -1,14 +1,9 @@
 [Unit]
-Description=wlan0 power off
+Description=wlan0 power management
 After=network.target
 
 [Service]
-ExecStart=wlan0poweroff.sh
-WorkingDirectory=/home/pi/services
-StandardOutput=inherit
-StandardError=inherit
-Restart=always
-User=pi
+ExecStart=/home/pi/services/rpiwlan0poweroff/wlan0poweroff.sh
 
 [Install]
 WantedBy=multi-user.target
